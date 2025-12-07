@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "minify": "npx terser src/slidex.js -o slidex.min.js && npx csso src/slidex.css -o slidex.min.css"
+  },
+  "dependencies": {
+    "csso-cli": "^4.0.2",
+    "terser": "^5.44.1"
+  }
+}

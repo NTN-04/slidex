@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Slidex.js: Thư viện Slider/Carousel gọn nhẹ bằng Vanilla JavaScript
+    </title>
+    <meta
+      name="description"
+      content="Slidex.js là một thư viện slider/carousel gọn nhẹ và đơn giản được viết bằng JavaScript thuần túy. Nó được thiết kế để mang lại trải nghiệm người dùng tuyệt vời (không có phụ thuộc, hoàn toàn có thể tùy chỉnh)."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/highlight/styles.css" media="all" />
+    <link rel="stylesheet" href="./assets/styles.css" media="all" />
+    <link rel="stylesheet" href="./src/slidex.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Slidex.js</h1>
+        <div class="header__tagline">
+          Một thư viện slider/carousel đơn giản và nhẹ được xây dựng bằng
+          JavaScript thuần túy.
+        </div>
+        <a
+          href="https://github.com/sondnpt00343/slidex"
+          class="header__github"
+          target="_blank"
+        ></a>
+      </div>
+    </header>
+    <!-- /HEADER -->
+
+    <!-- CONTAINER -->
+    <div class="container content">
+      <h2 data-bullet="1" class="title" id="try-it-out">Dùng thử</h2>
+      <p>
+        Slidex là một thư viện <strong>slider/carousel</strong> nhẹ được xây
+        dựng bằng JavaScript thuần túy. (<a
+          href="https://github.com/sondnpt00343/slidex"
+          >Mã nguồn có sẵn trên GitHub</a
+        >)
+      </p>
+
+      <ul>
+        <li>Không có thư viện phụ thuộc</li>
+        <li>Hoàn toàn tùy biến được với CSS</li>
+        <li>Hỗ trợ tự động chạy (autoplay)</li>
+        <li>API đơn giản và trực quan</li>
+        <li>Gọn nhẹ và được tối ưu hóa</li>
+      </ul>
+
+      <p>Dưới đây là một vài ví dụ về cách sử dụng Slidex:</p>
+
+      <!-- Sample 1 -->
+      <p><strong>1. Slider cơ bản</strong></p>
+      <div id="slider1" class="slidex-container">
+        <div class="slide-item" style="background-color: #ffadad">Slide 1</div>
+        <div class="slide-item" style="background-color: #ffd6a5">Slide 2</div>
+        <div class="slide-item" style="background-color: #fdffb6">Slide 3</div>
+        <div class="slide-item" style="background-color: #caffbf">Slide 4</div>
+        <div class="slide-item" style="background-color: #9bf6ff">Slide 5</div>
+        <div class="slide-item" style="background-color: #a0c4ff">Slide 6</div>
+      </div>
+
+      <!-- Sample 2 -->
+      <p><strong>2. Slider tự động chạy (Autoplay)</strong></p>
+      <div id="slider2" class="slidex-container">
+        <div class="slide-item" style="background-color: #ffadad">Slide 1</div>
+        <div class="slide-item" style="background-color: #ffd6a5">Slide 2</div>
+        <div class="slide-item" style="background-color: #fdffb6">Slide 3</div>
+        <div class="slide-item" style="background-color: #caffbf">Slide 4</div>
+      </div>
+
+      <!-- Sample 3 -->
+      <p><strong>3. Slider với vòng lặp (Loop)</strong></p>
+      <div id="slider3" class="slidex-container">
+        <div class="slide-item" style="background-color: #ffadad">Slide 1</div>
+        <div class="slide-item" style="background-color: #ffd6a5">Slide 2</div>
+        <div class="slide-item" style="background-color: #fdffb6">Slide 3</div>
+        <div class="slide-item" style="background-color: #caffbf">Slide 4</div>
+      </div>
+      <style>
+        .slidex-container {
+          margin-bottom: 20px;
+        }
+        .slide-item {
+          height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          font-weight: bold;
+          border-radius: 8px;
+        }
+      </style>
+
+      <h2 data-bullet="2" class="title" id="installation">Cài đặt</h2>
+      <table class="methods">
+        <thead>
+          <tr>
+            <th>Phương thức</th>
+            <th class="w60">Các bước</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Tải trực tiếp</td>
+          <td>
+            <a
+              href="https://github.com/sondnpt00343/slidex/archive/master.zip"
+              title="Download slidex"
+            >
+              Tải file ZIP
+            </a>
+            <p>
+              Chỉ cần giải nén tệp ZIP và sử dụng các tệp
+              <code>slidex.min.js</code> và <code>slidex.min.css</code>
+              trong dự án của bạn.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <p>
+        Slidex cung cấp một tệp CSS nhỏ mà bạn có thể nhúng trực tiếp qua link
+        CDN. Điều này giúp bạn dễ dàng tích hợp vào dự án và tùy chỉnh khi cần.
+      </p>
+
+      <p>Nhúng tệp JavaScript của Slidex vào dự án của bạn:</p>
+
+      <pre
+        class="html"
+      ><code>&lt;script src=&quot;https://cdn.jsdelivr.net/gh/sondnpt00343/slidex@v1.0.0/slidex.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+      <blockquote>
+        Bạn có thể sử dụng các phiên bản
+        <a
+          href="https://github.com/sondnpt00343/slidex/releases"
+          target="_blank"
+          >đã phát hành</a
+        >
+        của Slidex tại đây.
+      </blockquote>
+
+      <h2 data-bullet="3" class="title" id="usage">Cách sử dụng</h2>
+      <p>Đây là cấu trúc HTML cơ bản bạn cần để thiết lập Slidex:</p>
+
+      <pre class="html"><code>&lt;div id=&quot;my-slider&quot;&gt;
+    &lt;div&gt;Nội dung slide 1&lt;/div&gt;
+    &lt;div&gt;Nội dung slide 2&lt;/div&gt;
+    &lt;div&gt;Nội dung slide 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>Và đây là cách bạn có thể sử dụng nó với JavaScript:</p>
+
+      <pre class="javascript"><code>// Khởi tạo một slider mới
+const slider = new Slidex('#my-slider', {
+    item: 1, // Số lượng item hiển thị
+    loop: true, // Lặp lại slide
+    speed: 500, // Tốc độ chuyển slide (ms)
+    autoplay: true, // Tự động chạy
+    autoplayTimeout: 3000, // Thời gian chờ giữa các lần chuyển slide
+    navigation: true, // Hiển thị dấu chấm điều hướng
+});
+
+// Chuyển đến slide cụ thể (sử dụng phương thức nội bộ)
+slider.moveSlide(1); // Chuyển tới slide tiếp theo
+</code></pre>
+
+      <h2 data-bullet="4" class="title" id="options">Tùy chọn</h2>
+      <table class="methods">
+        <thead>
+          <tr>
+            <th>Tùy chọn</th>
+            <th>Kiểu dữ liệu</th>
+            <th class="w60">Mô tả</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>item</td>
+            <td>number</td>
+            <td>
+              Số lượng slide hiển thị cùng một lúc (mặc định: <code>1</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>speed</td>
+            <td>number</td>
+            <td>
+              Tốc độ chuyển slide tính bằng mili giây (mặc định:
+              <code>300</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>loop</td>
+            <td>boolean</td>
+            <td>
+              Cho phép lặp lại slider khi đến slide cuối cùng (mặc định:
+              <code>false</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>boolean</td>
+            <td>
+              Hiển thị các dấu chấm điều hướng (mặc định: <code>true</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>control</td>
+            <td>boolean</td>
+            <td>
+              Hiển thị các nút điều khiển Trước/Sau (mặc định:
+              <code>true</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>controlText</td>
+            <td>array</td>
+            <td>
+              Mảng chứa văn bản cho các nút Trước và Sau (mặc định:
+              <code>['&lt;', '&gt;']</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>prevButton</td>
+            <td>string</td>
+            <td>
+              Selector CSS cho nút "Trước" tùy chỉnh (mặc định:
+              <code>null</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>nextButton</td>
+            <td>string</td>
+            <td>
+              Selector CSS cho nút "Sau" tùy chỉnh (mặc định:
+              <code>null</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>slideBy</td>
+            <td>number | 'page'</td>
+            <td>
+              Số lượng slide sẽ trượt mỗi lần. Nếu là <code>'page'</code>, nó sẽ
+              trượt theo số lượng <code>item</code> (mặc định: <code>1</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>autoplay</td>
+            <td>boolean</td>
+            <td>
+              Kích hoạt chế độ tự động trượt (mặc định: <code>false</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>autoplayTimeout</td>
+            <td>number</td>
+            <td>
+              Thời gian chờ giữa các lần trượt tự động (mặc định:
+              <code>3000</code>).
+            </td>
+          </tr>
+          <tr>
+            <td>autoplayHoverPause</td>
+            <td>boolean</td>
+            <td>
+              Tạm dừng tự động trượt khi di chuột qua slider (mặc định:
+              <code>true</code>).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 data-bullet="5" class="title" id="api">API</h2>
+      <table class="methods">
+        <thead>
+          <tr>
+            <th>Phương thức</th>
+            <th class="w60">Mô tả</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>moveSlide(step)</td>
+            <td>
+              Di chuyển slider theo một số bước (<code>step</code>) nhất định.
+              Nếu <code>step</code> là số dương, slider sẽ di chuyển về phía
+              trước. Nếu là số âm, nó sẽ di chuyển về phía sau.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer class="footer">
+        <p>Slidex.js - <i>Nguyễn Trong Nghĩa</i></p>
+      </footer>
+    </div>
+    <!-- /CONTAINER -->
+
+    <script src="./assets/highlight/highlight.js"></script>
+    <script src="./src/slidex.js"></script>
+    <script>
+      // highlight code
+      hljs.initHighlightingOnLoad();
+
+      // Demo 1: Slider cơ bản
+      new Slidex("#slider1", {
+        item: 3,
+        slideBy: 1,
+        speed: 500,
+        navigation: true,
+        control: true,
+      });
+
+      // Demo 2: Slider tự động chạy
+      new Slidex("#slider2", {
+        item: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        speed: 800,
+        navigation: false,
+      });
+
+      // Demo 3: Slider với vòng lặp
+      new Slidex("#slider3", {
+        item: 2,
+        loop: true,
+        speed: 400,
+        controlText: ["Trước", "Sau"],
+      });
+    </script>
+  </body>
+</html>
